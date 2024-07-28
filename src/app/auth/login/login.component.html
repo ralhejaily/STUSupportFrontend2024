@@ -1,0 +1,36 @@
+
+<br>
+<mat-card>
+  <mat-card-content>
+
+    <div class="header">
+      <img src="/logo.png" style=" height: 220px; width: 220px;" >
+    </div>
+
+    <form [formGroup]= "loginForm" (submit)= "onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label >اسم المستخدم</mat-label>
+        <input matInput type="text" class="text-number" formControlName="username" autocomplete="off">
+        <mat-icon matSuffix >
+          <fa-icon [icon]="faUser"></fa-icon>
+        </mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>كلمة المرور</mat-label>
+        <input matInput type="password" class="text-number" formControlName="password" autocomplete="off">
+        <mat-icon matSuffix>
+          <fa-icon [icon]= "faLock"></fa-icon>
+        </mat-icon>
+      </mat-form-field>
+      <!-- &lt;!&ndash;  -->
+      <!-- <span class="link" href="./././reset-password" >Forget Password ?</span> -->
+<!--      <a href="./././reset-password" class="text-blue-50 fw-bold">  Forget Password  </a>-->
+
+      <!-- &ndash;&gt; -->
+      <br>
+      <br>
+      <button mat-flat-button color="primary" class="login-button" >تسجيل دخول</button>
+      <!-- &lt;!&ndash; routerLink="../utar" &ndash;&gt; -->
+    </form>
+  </mat-card-content>
+</mat-card>
